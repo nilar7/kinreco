@@ -1,3 +1,5 @@
 @charset "utf-8";
 @import "base.css";
 @import "module.css";
+@import "header.css";
+@import "footer.css";
