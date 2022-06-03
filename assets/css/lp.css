@@ -18,13 +18,8 @@
 	color: #be2323;
 }
 .login_screen{
-	width: 50%;
-	max-width: 420px;
 	background: #f7f7f7;
 	border-radius: 30px;
-}
-.screen_mobile{
-	margin-right: 30px;
 }
 .info_list{
 	border-radius: 30px 30px 0 0;
@@ -71,3 +66,152 @@
 	margin-left: -15px;
 }
 /*end of Trial Experience Section*/
+/*Usage Fee Section*/
+.usage_sec{
+	background: #fff5f1;
+}
+.usage_list{
+	margin-bottom: 15px;
+}
+.usage_item{
+	background: #ffffff;
+	border-radius: 20px;
+	padding: 20px 25px;
+}
+.usage_item .orange_btn{
+	font-size: 18px;
+	color: #ffffff;
+	border-radius: 25px;
+	padding: 16px;
+	margin-bottom: 20px;
+}
+.usage_item .orange_btn:before{
+	border-width: 10px 10px 0 10px;
+	bottom: -9px;
+}
+.usage_item .txt_common_small{
+	text-align: left;
+}
+.txt_payment{
+	font-size: 13px;
+}
+.app_account .txt_payment{
+	margin-bottom: 22px;
+}
+.payment .txt_payment{
+	margin-bottom: 10px;
+}
+.usage_example .txt_common{
+	color: #ff8154;
+	margin-bottom: 10px;
+}
+.usage_example,
+.payment_list{
+	background: #f7f7f7;
+	border-radius: 16px;
+	padding: 20px;
+}
+.payment_list li{
+	margin-bottom: 3px;
+}
+.txt_payment_note{
+	color: #6f6f6f;
+	text-align: left;
+	margin-bottom: 65px;
+}
+.campaign_sec{
+	background: #ffffff;
+	border-radius: 30px;
+	padding: 0 45px;
+	position: relative;
+}
+.campaign_sec:before{
+	content: '';
+	position: absolute;
+	background: url("/assets/images/lp/bg_campaign.png") no-repeat top center;
+	-webkit-background-size: 100% auto;
+	     -o-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 882px;
+	height: 435px;
+	left: 50%;
+	top: -25px;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+.ttl_campaign{
+	width: 91%;
+	max-width: 708px;
+	margin: 0 auto 12px;
+}
+.ttl_campaign img{
+	margin-top: -15px;
+}
+.txt_campaign_des,
+.txt_campaign_des span{
+	font-size: 20px;
+	line-height: 1.4;
+}
+.txt_campaign_des{
+	color: #3a3a3a;
+	margin-bottom: 35px;
+}
+.txt_campaign_des span{
+	color: #ff8154;
+}
+.campaign_info{
+	background: #f7f7f7;
+	border-radius: 15px;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	padding: 25px 20px;
+	margin-bottom: 40px;
+}
+.campaign_type,
+.campaign_date,
+.campaign_date span{
+	font-size: 14px;
+	line-height: 1.8;
+	color: #3a3a3a;
+}
+.campaign_type{
+	margin-right: 24px;
+}
+.campaign_date span{
+	color: #ff8154;
+}
+.campaign_sec .yellow_btn{
+	border-radius: 30px;
+	padding: 17px 55px 17px 92px;
+	margin-bottom: 45px;
+}
+.campaign_sec .yellow_btn:before{
+	content: '';
+	position: absolute;
+	background: url("/assets/images/lp/icon_mail.png") no-repeat left center;
+	-webkit-background-size: 100% auto;
+	     -o-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 28px;
+	height: 23px;
+	left: 47px;
+	top: 52%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.campaign_img{
+	position: absolute;
+	width: 15%;
+	max-width: 115px;
+	right: 40px;
+	bottom: -7px;
+}
+/*end of Usage Fee Section*/
