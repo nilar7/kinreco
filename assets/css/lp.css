@@ -1,0 +1,73 @@
+/*Trial Experience Section*/
+.sample_screen_sec{
+	background: #fff;
+}
+.sample_screen_sec .ttl_common_line{
+	margin-bottom: 5px;
+}
+.txt_login_info,
+.txt_login_info span{
+	font-size: 18px;
+	line-height: 1.4;
+}
+.txt_login_info{
+	margin-bottom: 15px;
+	color: #3a3a3a;
+}
+.txt_login_info span{
+	color: #be2323;
+}
+.login_screen{
+	width: 50%;
+	max-width: 420px;
+	background: #f7f7f7;
+	border-radius: 30px;
+}
+.screen_mobile{
+	margin-right: 30px;
+}
+.info_list{
+	border-radius: 30px 30px 0 0;
+	max-height: 114px;
+	min-height: 114px;
+}
+.info_list li{
+	font-size: 18px;
+	color: #fff;
+	line-height: 1.3;
+}
+.info_list li.ttl_login_info{
+	font-size: 20px;
+	margin-bottom: 4px;
+}
+.login_screen .yellow_btn{
+	margin-bottom: 30px;
+}
+.login_screen .yellow_btn:after{
+	content: '';
+	position: absolute;
+	background: url("/assets/images/lp/icon_login.png") no-repeat right center;
+	-webkit-background-size: 100% auto;
+	     -o-background-size: 100% auto;
+	        background-size: 100% auto;
+	width: 22px;
+	height: 19px;
+	right: 20px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.screen_mobile .screen_img{
+	width: 95%;
+	max-width: 398px;
+	margin: -10px 0 0 -35px;
+}
+.screen_pc .screen_img{
+	width: 108%;
+	max-width: 450px;
+	margin-left: -15px;
+}
+/*end of Trial Experience Section*/
