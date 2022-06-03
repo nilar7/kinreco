@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content‒Style‒Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="keywords" content="" lang="ja" xml:lang="ja" />
+    <meta name="description" content="どこからでもワンプッシュ。とにかくカンタンな勤怠管理システム「ポチっと勤レコくん」" lang="ja" xml:lang="ja" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/import.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/lp.css" media="all" />
+
+    <!-- Social -->
+    <link rel="shortcut icon" href="/common/images/favicon.ico" />
+    <link rel="icon" href="/common/images/favicon.ico" />
+
+    <!-- facebook -->
+    <meta property="og:site_name" content="ポチっと勤レコくん" />
+    <meta property="og:title" content="ポチっと勤レコくん" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" /><!-- ページの個別URL -->
+    <meta property="og:image" content="/common/images/img_ogp.jpg" />
+    <meta property="og:description" content="どこからでもワンプッシュ。とにかくカンタンな勤怠管理システム「ポチっと勤レコくん」" /><!-- ページの説明 -->
+    
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- jquery.min.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>ポチっと勤レコくん</title>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "url": "https://kinreco.com/lp/",
+            "name": "ポチっと勤レコくん""
+        }
+    </script>
+
+    <!-- Font -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'wnx6kuw',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    
+</head>
+<body>
+	<!-- include header.html -->
+		<?php require_once('include_files/header.html'); ?>
+	<!-- /include header.html -->
+
+	<div class="kinreco" id="kinreco">
+        <!-- MV Section -->
+
+        <!-- end of MV Section -->
+        <!-- Service Section -->
+        <section class="service_sec">
+            <div class="inner">
+                <h3 class="ttl_common_line txt_bold"><span class="line_txt txt_bold">＼ まずはお試し体験 ／</span><br><span class="ttl_orange txt_bold">サンプル画面</span>をさわってみよう</h3>
+                <p class="txt_common txt_regular">実際に触ってお試しいただけるお試し体験をご用意しております。<br>「ポチっと勤レコくん」とはどのようなサービスなのか、画面を触ってみてください。</p>
+                <p class="txt_common_small txt_regular">※こちらは誰でもアクセス・編集できるようになっているため、個人情報等を含むご入力いただきました内容に関する責任は負いかねますので、<br>ご氏名等の個人を特定できてしまう情報のご入力はお控えいただけますようお願いいたします。</p>
+            </div>
+        </section>
+        <!-- end of Service Section -->
+	</div>
+
+	<!-- include footer.html -->
+		<?php require_once('include_files/footer.html'); ?>
+	<!-- /include footer.html -->
+
+<script type="text/javascript" src="/assets/js/common.js"></script>
+
+</body>
+</html>

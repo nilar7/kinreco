@@ -82,39 +82,6 @@ var responsive = (function(){
   };
 })();
 
-
-//font-size rem change
-jQuery(function($){
-  var $w = $(window);
-  var $h = $("html");
-  var $b = $("body");
-
-  var rem = function(n){
-    if ($w.width() < 768) {
-      return n * $w.width() / 7.5;
-    }
-    else if($w.width() >= 767 && $w.width() <= 980){
-      return n * $w.width() / 9.8;
-    }
-    
-  };
-
-  (function(){
-    responsive(0, 767, function(changed){
-      $h.css("font-size", rem(1));
-      if(!changed) return;
-
-    });
-    
-    responsive(768, null, function(changed){
-      $h.css("font-size","");
-      if(!changed) return;
-    });
-  })();
-  $w.resize();
-
-});
-
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -132,19 +99,3 @@ $(function() {
       }
   });
 });
-
-// page_top
-$(document).ready( function(){
-        var topBtn = $('.page_top');       
-        topBtn.hide();
-        //スクロールが100に達したらボタン表示
-        $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                        topBtn.fadeIn();
-                } else {
-                        topBtn.fadeOut();
-                }
-        });
-});
-// end of page_top
-
