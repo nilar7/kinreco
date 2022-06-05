@@ -29,7 +29,9 @@ section{
 	font-style: normal;
 }
 .ttl_common_line,
-.ttl_common_line .ttl_orange{
+.ttl_common_line .ttl_orange,
+.ttl_common_line .ttl_ques,
+.ttl_common_line .ttl_ans{
 	font-size: 32px;
 	line-height: 1.5;
 }

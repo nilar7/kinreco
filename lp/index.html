@@ -143,6 +143,75 @@
             </div>
         </section>
         <!-- end of Usage Fee Section -->
+        <!-- Question And Answer -->
+        <section class="qa_sec">
+            <div class="inner">
+                <h3 class="ttl_common_line txt_bold"><span class="line_txt txt_bold">＼ 不明点を解消 ／</span><br>気になるポイント<span class="ttl_ques">Q</span>＆<span class="ttl_ans">A</span></h3>
+                <ul class="qa_list">
+                    <li class="qa_item">
+                        <div class="ques_sec flex">
+                            <span class="txt_bold icon_ques">Q</span>
+                            <p class="txt_bold txt_ques">勤怠ログデータは何年分確認できますか？</p>
+                        </div>
+                        <div class="ans_sec flex">
+                            <span class="txt_bold icon_ans">A</span>
+                            <p class="txt_bold txt_common txt_ans">勤怠ログデータは、契約中のデータ保存期間制限はございません。<br>必要なデータは契約終了前にcsvデータとしてダウンロードして保存いただけます。</p>
+                        </div>
+                    </li>
+                    <li class="qa_item">
+                        <div class="ques_sec flex">
+                            <span class="txt_bold icon_ques">Q</span>
+                            <p class="txt_bold txt_ques">間違って押してしまった勤怠ログデータの修正はできますか？</p>
+                        </div>
+                        <div class="ans_sec flex">
+                            <span class="txt_bold icon_ans">A</span>
+                            <p class="txt_bold txt_common txt_ans">管理者画面から登録済みの勤怠ログデータを編集することが可能です。一般社員ユーザーの画面からはボタン押下更新のみとなっておりますので、社員の方の出退勤後の改ざんの心配はございません。</p>
+                        </div>
+                    </li>
+                    <li class="qa_item">
+                        <div class="ques_sec flex">
+                            <span class="txt_bold icon_ques">Q</span>
+                            <p class="txt_bold txt_ques">自社の勤怠ログデータが他に漏れることはありませんか？</p>
+                        </div>
+                        <div class="ans_sec flex">
+                            <span class="txt_bold icon_ans">A</span>
+                            <p class="txt_bold txt_common txt_ans">企業アカウント単位でデータを管理しております。また、企業アカウント毎にログイン制限を掛けておりますので、自社アカウント以外にデータが閲覧される心配はございません。</p>
+                        </div>
+                    </li>
+                    <li class="qa_item">
+                        <div class="ques_sec flex">
+                            <span class="txt_bold icon_ques">Q</span>
+                            <p class="txt_bold txt_ques">何人分の社員まで勤怠管理できますか？</p>
+                        </div>
+                        <div class="ans_sec flex">
+                            <span class="txt_bold icon_ans">A</span>
+                            <p class="txt_bold txt_common txt_ans">ご契約の人数の方分のユーザーアカウントをご利用いただけます。契約ユーザーアカウント数には管理者用アカウントも含まれますので、社員用アカウントと管理者用アカウントの2種がいらっしゃる場合には2名分のアカウントの契約が必要となりますので、ご注意お願いいたします。</p>
+                        </div>
+                    </li>
+                    <li class="qa_item">
+                        <div class="ques_sec flex">
+                            <span class="txt_bold icon_ques">Q</span>
+                            <p class="txt_bold txt_ques">機能やデザインを変更するなどのカスタマイズはできますか？</p>
+                        </div>
+                        <div class="ans_sec flex">
+                            <span class="txt_bold icon_ans">A</span>
+                            <p class="txt_bold txt_common txt_ans">「ポチっと勤レコくん」をベースシステムとして、企業様毎の機能カスタマイズを有料にて承っております。下記のお問合せフォームよりお気軽にご相談ください。</p>
+                        </div>
+                    </li>
+                    <li class="qa_item">
+                        <div class="ques_sec flex">
+                            <span class="txt_bold icon_ques">Q</span>
+                            <p class="txt_bold txt_ques">いつからサービスを利用できますか？</p>
+                        </div>
+                        <div class="ans_sec flex">
+                            <span class="txt_bold icon_ans">A</span>
+                            <p class="txt_bold txt_common txt_ans">ご利用開始は下記のフォームにご連絡をいただいてから最短で1週間～2週間程度程度（※）のお時間をいただいております。<br>※年末年始、GW、お盆休み等の大型連休を挟む場合には別途ご相談ください。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- end of Question And Answer -->
 	</div>
 
 	<!-- include footer.html -->
@@ -150,6 +219,20 @@
 	<!-- /include footer.html -->
 
 <script type="text/javascript" src="../assets/js/common.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.qa_item').click(function(e){
+            if($(this).find('.ques_sec').hasClass('opened')){
+                $(this).find('.ans_sec').slideUp("show");
+                $(this).find(".ques_sec").removeClass('opened');  
+            }else{
+                $(this).find('.ans_sec').slideDown("show");
+                $(this).find(".ques_sec").addClass('opened');
+                $(this).find(".ans_sec").css('display','flex');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
