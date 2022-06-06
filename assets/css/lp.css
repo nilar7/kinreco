@@ -752,7 +752,7 @@ textarea.form_field {
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
     /*mv_kinreco_lp*/
     section.mv_kinreco_lp {
-        padding: 5.833vw 0 0;
+        padding: 9.833vw 0 0;
     }   
 
     .mv_content .txt_mv_dotted{
@@ -760,7 +760,7 @@ textarea.form_field {
         margin-right: 9vw;
     }
 
-    .mv_content .txt_common{
+    .mv_content .txt_com{
         font-size: 2.167vw;
         letter-spacing: .05em;
         margin-bottom: 2.500vw;
@@ -776,7 +776,7 @@ textarea.form_field {
     }
     .mv_kinrekun_image{
         width: 52%;
-        top: -2.2vw;
+        top: -2.5vw;
     }
 
     /*attend_sys_sec*/
@@ -839,7 +839,7 @@ textarea.form_field {
 
     .resong_msg.msg04,
     .resong_msg.msg05{
-        bottom: 2.500vw;
+        bottom: 15.5vw;
     }
 
     .resong_msg p{
