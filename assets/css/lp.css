@@ -2,7 +2,7 @@
 /*mv_kinreco_lp*/
 section.mv_kinreco_lp {
     background: #ff7845;
-    padding: 70px 0 0;
+    padding: 120px 0 0;
 }
 
 .mv_kinreco_lp .inner{
@@ -1208,8 +1208,8 @@ textarea.form_field {
         margin: 0 0 0 .3rem;
     }
 
-    .mv_content .txt_common{
-        font-size: .29;
+    .mv_content .txt_com{
+        font-size: .29rem;
         margin-bottom: .4rem;
     }
 
