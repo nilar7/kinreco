@@ -8,10 +8,6 @@
     background-color: #ff8154;
     height: 55px;
     border-bottom: 1px solid #ffffff;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
 }
 
 .logo_sec {
@@ -31,22 +27,14 @@
 }
 
 .menu_list_sec {
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     width: 60%;
     justify-content: right;
 }
 
-.menu_list {
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
 .menu_item a {
+	 font-family: noto-sans-cjk-jp, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     display: inline-block;
     color: #ffffff;
     font-size: 14px;
@@ -159,10 +147,6 @@
     }
 
     .menu_list_sec {
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
         width: 55.6%;
         justify-content: left;
         background-color: #ff6e43;
@@ -192,28 +176,43 @@
         -o-animation: fadeIn ease 2s;
         -ms-animation: fadeIn ease 2s;
         opacity: 1;
+        z-index:9;
 
     }
 
-    .menu_item {
+    header .menu_item {
         width: 50%;
+        padding: .5rem 0;
     }
 
-    .menu_item:nth-child(odd) {
+    header .menu_item:nth-child(odd) {
         border-right: 0.02rem solid #ffffff;
     }
 
-    .menu_item:nth-child(1),
-    .menu_item:nth-child(2) {
+    header .menu_item:nth-child(1),
+    header .menu_item:nth-child(2) {
         border-bottom: 0.02rem solid #ffffff;
     }
 
     .menu_item a {
         display: inline-block;
         font-size: .24rem;
-        padding: .5rem 0;
+        padding:  0;
         text-align: center;
         width: 100%;
+        position: relative;
+    }
+    header .menu_item a::after{
+        content: '';
+        position: absolute;
+        border: solid #ffffff;
+        border-width: 0 0.02rem 0.02rem 0;
+        display: inline-block;
+        padding: .055rem;
+         transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        right: 0.4rem;
+        top: 0.015rem;
     }
 
     .app_cosulation {

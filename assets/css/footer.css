@@ -1,27 +1,39 @@
+footer{
+    position: relative;
+}
 .footer_sec {
     width: 100%;
     background-color: #000000;
     padding: 16px 15px;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
 }
 
 .footer_link_list {
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     width: 60%;
     justify-content: right;
 }
-
-.link_item a {
-    display: inline-block;
-    color: #ffffff;
-    font-size: 14px;
-    padding: 20px 30px;
+.page_top {
+    cursor: pointer;
+    position: absolute;
+    bottom: 86px;
+    right: 20px;
+    width: 130px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #ffea59;
+    font-size: 12px;
+    padding: 15px 0;
+}
+.arrow {
+  border: solid #42423b;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 5px;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
 }
 
 
@@ -38,13 +50,23 @@
     .footer_link_list {
         width: 60%;
     }
-
-    .link_item a {
-        display: inline-block;
-        color: #ffffff;
-        font-size: 1.167vw;
-        padding: 1.667vw 2.500vw;
+    .page_top {
+        bottom: 7.167vw;
+        right: 1.667vw;
+        width: 10.833vw;
+        border-top-left-radius: 0.833vw;
+        border-top-right-radius: 0.833vw;
+        font-size: 1vw;
+        padding: 1.250vw 0;
     }
+    .arrow {
+        border-width: 0 0.167vw 0.167vw 0;
+        display: inline-block;
+        padding: 0.250vw;
+        margin-left: 0.417vw;
+    }
+
+   
 
 }
 
@@ -72,9 +94,29 @@
         margin-bottom: .4rem;
 
     }
+    .footer_sec .menu_item {
+    	width: 100%;
+    }
 
-    .link_item a {
+    .footer_sec .menu_item a {
         font-size: .24rem;
         padding: 0.12rem 0;
+    }
+    .page_top {
+        bottom: 4.25rem;
+        right: 0.1rem;
+        width: 2.28rem;
+        text-align: center;
+        border-top-left-radius: 0.1rem;
+        border-top-right-radius: 0.1rem;
+        font-size: .2rem;
+        padding: 0.25rem 0;
+    }
+    .arrow {
+        border-width: 0 0.02rem 0.02rem 0;
+        padding: 0.06rem;
+        margin-left: 0.1rem;
+        position: relative;
+        bottom: -0.04rem;
     }
 }
