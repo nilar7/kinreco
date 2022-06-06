@@ -141,6 +141,9 @@ section {
     line-height: 1.4;
     padding: 14px 58px;
     position: relative;
+    font-family: noto-sans-cjk-jp, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .btn_yellow.btn_contact {
@@ -170,29 +173,153 @@ section {
 
 /*For tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-	.btn_yellow {
-	    border-radius: 3.333vw;
-	    font-size: 1.500vw;
-	    padding: 1.167vw 4.833vw;
-	}
+    section {
+        padding: 7.500vw 0;
+    }
 
-	.btn_yellow.btn_contact {
-	    border-radius: 2.500vw;
-	    padding: 1.417vw 4.583vw 1.417vw 7.667vw;
-	    margin-bottom: 3.750vw;
-	}
+    .inner {
+        max-width: 72.500vw;
+    }
 
-	.btn_yellow.btn_contact:before {
-	    width: 2.333vw;
-	    height: 1.917vw;
-	    left: 3.917vw;
-	}
+    .txt_com {
+        font-size: 1.333vw;
+    }
+
+    .txt_com_sm {
+        font-size: 1vw;
+    }
+
+    .ttl_h3 {
+        font-size: 2.667vw;
+        margin-bottom: 2.083vw;
+    }
+
+    .ttl_h3 span {
+        font-size: 2.667vw;
+    }
+
+    .ttl_h3 span.line_txt {
+        font-size: 2vw;
+    }
+
+    .main_mb {
+        margin-bottom: 2.500vw;
+    }
+
+    .flex01,
+    .flex02 {
+        max-width: 35vw;
+    }
+
+    .flex01 {
+        margin-right: 2.500vw;
+    }
+
+    .btn_org {
+        border-radius: 2.500vw;
+        padding: 1.500vw;
+        margin-bottom: 3.583vw;
+    }
+
+    .btn_org:before {
+        border-width: 1.500vw 1.417vw 0 1.417vw;
+        bottom: -1.333vw;
+    }
+
+    .btn_yellow {
+        border-radius: 3.333vw;
+        font-size: 1.500vw;
+        padding: 1.167vw 4.833vw;
+    }
+
+    .btn_yellow.btn_contact {
+        border-radius: 2.500vw;
+        padding: 1.417vw 4.583vw 1.417vw 7.667vw;
+        margin-bottom: 3.750vw;
+    }
+
+    .btn_yellow.btn_contact:before {
+        width: 2.333vw;
+        height: 1.917vw;
+        left: 3.917vw;
+    }
 }
 /*end of Tablet*/
 
 /*For SP*/
 @media only screen and (max-width: 767px) {
-	
+    section {
+        padding: 0.90rem 0;
+    }
+
+    .inner {
+        width: 6.50rem;
+        max-width: 6.50rem;
+    }
+
+    .txt_com {
+        font-size: 0.26rem;
+    }
+
+    .txt_com_sm {
+        font-size: 0.20rem;
+    }
+
+    .ttl_h3 {
+        font-size: 0.40rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .ttl_h3 span {
+        font-size: 0.40rem;
+    }
+
+    .ttl_h3 span.line_txt {
+        font-size: 0.30rem;
+    }
+
+    .main_mb {
+        margin-bottom: 0.35rem;
+    }
+
+    .flex01,
+    .flex02 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .flex01 {
+        margin: 0 0 0.35rem 0;
+    }
+
+    .btn_org {
+        border-radius: 0.30rem;
+        padding: 0.20rem;
+        margin-bottom: 0.60rem;
+    }
+
+    .btn_org:before {
+        border-width: 0.25rem 0.23rem 0 0.23rem;
+        bottom: -0.23rem;
+    }
+
+    .btn_yellow {
+        border-radius: 0.52rem;
+        font-size: 0.27rem;
+        padding: 0.175rem 0.74rem;
+    }
+
+    .btn_yellow.btn_contact {
+        border-radius: 0.45rem;
+        padding: 0.26rem 0.85rem 0.26rem 1.35rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .btn_yellow.btn_contact:before {
+        width: 0.42rem;
+        height: 0.34rem;
+        left: 0.70rem;
+    }
 }
 
 /*end of SP*/

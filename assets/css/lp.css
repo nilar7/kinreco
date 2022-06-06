@@ -333,6 +333,7 @@ section.mv_kinreco_lp {
         text-align: right;
     }
 }
+
 /*Trial Experience Section*/
 .sample_screen_sec {
     background: #fff;
@@ -343,8 +344,8 @@ section.mv_kinreco_lp {
 }
 
 .sample_screen_sec .txt_com_sm span {
-	font-size: 12px;
-	line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.5;
 }
 
 .txt_login_info,
@@ -424,7 +425,7 @@ section.mv_kinreco_lp {
 }
 
 .txt_usage span {
-	font-size: 22px;
+    font-size: 22px;
     color: #ff8154;
     line-height: 1.3;
 }
@@ -671,45 +672,675 @@ section.mv_kinreco_lp {
 
 /*Form Section*/
 .form_sec {
-	background: #ff8154;
+    background: #ff8154;
 }
 
 .form_sec .ttl_h3,
 .form_sec .ttl_h3 .line_txt {
-	color: #fff;
+    color: #fff;
 }
 
 .app_form {
-	width: 100%;
-	background: #fff;
-	border-radius: 30px;
-	padding: 45px 0 0 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 30px;
+    padding: 45px 0 0 0;
 }
 
-.app_form .txt_com {
-	font-size: 18px;
-	margin-bottom: 18px;
+.txt_form_info {
+    font-size: 18px;
+    margin-bottom: 18px;
 }
 
 .app_form .txt_com_sm {
-	color: #6f6f6f;
-	margin-bottom: 55px;
+    color: #6f6f6f;
+    margin-bottom: 55px;
 }
 
 .form_app {
-	background: #fff5f1;
-	border-radius: 0 0 30px 30px;
-	padding: 35px 65px;
+    background: #fff5f1;
+    border-radius: 0 0 30px 30px;
+    padding: 35px 65px;
 }
 
 .txt_form_note {
-	font-size: 22px;
-	color: #3a3a3a;
-	line-height: 1.5;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 40px;
 }
 
 .txt_form_note span {
-	font-size: 14px;
-	color: #be2323;
+    font-size: 14px;
+    color: #be2323;
+}
+
+.form_item {
+    -webkit-align-items: center;
+            align-items: center;
+    margin-bottom: 20px;
+}
+
+.form_item.form_textarea {
+    margin-bottom: 44px;
+}
+
+.txt_label {
+    text-align: left;
+    width: 19%;
+}
+
+.txt_label span {
+    font-size: 14px;
+    color: #be2323;
+}
+
+.form_field{
+    width: 78%;
+    background: #ffffff;
+    border: 1px solid #bbbbbb;
+    font-size: 16px;
+    color: #3a3a3a;
+    line-height: 1.6;
+    height: 51px;
+    padding: 0 10px;
+    outline: none;
+}
+
+textarea.form_field {
+    height: 103px;
+    padding: 10px;
+}
+
+.form_app .btn_yellow {
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 16px 77px;
 }
 /*end of Form Section*/
+
+/*For tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    /*Trial Experience Section*/
+    .sample_screen_sec .ttl_h3 {
+        margin-bottom: 0.417vw;
+    }
+
+    .sample_screen_sec .txt_com_sm span {
+        font-size: 1vw;
+    }
+
+    .txt_login_info,
+    .txt_login_info span {
+        font-size: 1.500vw;
+    }
+
+    .txt_login_info {
+        margin-bottom: 1.250vw;
+    }
+
+    .login_screen {
+        border-radius: 2.500vw;
+    }
+
+    .info_list {
+        border-radius: 2.500vw 2.500vw 0 0;
+        max-height: 9.500vw;
+        min-height: 9.500vw;
+    }
+
+    .info_list li {
+        font-size: 1.500vw;
+    }
+
+    .info_list li.ttl_login_info {
+        font-size: 1.667vw;
+        margin-bottom: 0.333vw;
+    }
+
+    .login_screen .btn_yellow {
+        margin-bottom: 2.500vw;
+    }
+
+    .login_screen .btn_yellow:after {
+        width: 1.833vw;
+        height: 1.583vw;
+        right: 1.667vw;
+    }
+
+    .screen_mobile .screen_img {
+        max-width: 33.167vw;
+        margin: -0.833vw 0 0 -2.917vw;
+    }
+
+    .screen_pc .screen_img {
+        max-width: 37.500vw;
+        margin-left: -1.250vw;
+    }
+    /*end of Trial Experience Section*/
+
+    /*Usage Fee Section*/
+    .txt_usage span {
+        font-size: 1.833vw;
+    }
+
+    .usage_list {
+        margin-bottom: 1.250vw;
+    }
+
+    .usage_item {
+        border-radius: 1.667vw;
+        padding: 1.667vw 2.083vw;
+    }
+
+    .usage_item .btn_org {
+        font-size: 1.500vw;
+        border-radius: 2.083vw;
+        padding: 1.333vw;
+        margin-bottom: 1.667vw;
+    }
+
+    .usage_item .btn_org:before {
+        border-width: 0.833vw 0.833vw 0 0.833vw;
+        bottom: -0.750vw;
+    }
+
+    .txt_payment {
+        font-size: 1.083vw;
+    }
+
+    .app_account .txt_payment {
+        margin-bottom: 1.833vw;
+    }
+
+    .payment .txt_payment {
+        margin-bottom: 0.833vw;
+    }
+
+    .usage_example .txt_com {
+        margin-bottom: 0.833vw;
+    }
+
+    .usage_example,
+    .payment_list {
+        border-radius: 1.333vw;
+        padding: 1.667vw;
+    }
+
+    .payment_list li {
+        margin-bottom: 0.250vw;
+    }
+
+    .txt_payment_note {
+        margin-bottom: 5.417vw;
+    }
+
+    .campaign_sec {
+        border-radius: 2.500vw;
+        padding: 0 3.750vw;
+    }
+
+    .campaign_sec:before {
+        width: 73.500vw;
+        height: 36.250vw;
+        top: -2.083vw;
+    }
+
+    .ttl_campaign {
+        max-width: 59vw;
+        margin: 0 auto 1vw;
+    }
+
+    .ttl_campaign img {
+        margin-top: -1.250vw;
+    }
+
+    .txt_campaign_des,
+    .txt_campaign_des span {
+        font-size: 1.667vw;
+    }
+
+    .txt_campaign_des {
+        margin-bottom: 2.917vw;
+    }
+
+    .campaign_info {
+        border-radius: 1.250vw;
+        padding: 1.250vw 1.667vw;
+        margin-bottom: 3.333vw;
+    }
+
+    .campaign_type,
+    .campaign_date,
+    .campaign_date span {
+        font-size: 1.167vw;
+    }
+
+    .campaign_type {
+        margin-right: 2vw;
+    }
+
+    .campaign_img {
+        max-width: 9.583vw;
+        right: 3.333vw;
+        bottom: -0.583vw;
+    }
+    /*end of Usage Fee Section*/
+
+    /*Question And Answer*/
+    .qa_item {
+        margin-bottom: 1.667vw;
+    }
+
+    .ques_sec {
+        border-radius: 2.500vw;
+        padding: 1vw 2.500vw;
+    }
+
+    .ques_sec:after {
+        width: 1.500vw;
+        height: 0.917vw;
+        right: 2.500vw;
+    }
+
+    .icon_ques,
+    .icon_ans {
+        font-size: 2.500vw;
+    }
+
+    .txt_ques {
+        font-size: 1.833vw;
+    }
+
+    .ans_sec {
+        padding: 1.250vw 2.500vw;
+    }
+    /*end of Question And Answer*/
+
+    /*Form Section*/
+
+    .app_form {
+        border-radius: 2.500vw;
+        padding: 3.750vw 0 0 0;
+    }
+
+    .txt_form_info {
+        font-size: 1.500vw;
+        margin-bottom: 1.500vw;
+    }
+
+    .app_form .txt_com_sm {
+        margin-bottom: 4.583vw;
+    }
+
+    .form_app {
+        border-radius: 0 0 2.500vw 2.500vw;
+        padding: 2.917vw 5.417vw;
+    }
+
+    .txt_form_note {
+        font-size: 1.833vw;
+        margin-bottom: 3.333vw;
+    }
+
+    .txt_form_note span {
+        font-size: 1.167vw;
+    }
+
+    .form_item {
+        margin-bottom: 1.667vw;
+    }
+
+    .form_item.form_textarea {
+        margin-bottom: 3.667vw;
+    }
+
+    .txt_label span {
+        font-size: 1.167vw;
+    }
+
+    .form_field{
+        width: 77%;
+        border: 0.083vw solid #bbbbbb;
+        font-size: 1.333vw;
+        height: 4.250vw;
+        padding: 0 0.833vw;
+    }
+
+    textarea.form_field {
+        height: 8.583vw;
+        padding: 0.833vw;
+    }
+
+    .form_app .btn_yellow {
+        font-size: 1.667vw;
+        border-radius: 2.500vw;
+        padding: 1.333vw 6.417vw;
+    }
+    /*end of Form Section*/
+}
+/*end of Tablet*/
+
+/*For SP*/
+@media only screen and (max-width: 767px) {
+    /*Trial Experience Section*/
+    .sample_screen_sec .ttl_h3 {
+        margin-bottom: 0.15rem;
+    }
+
+    .txt_sample {
+        margin-bottom: 0.60rem;
+    }
+
+    .sample_screen_sec .txt_com_sm span {
+        font-size: 0.20rem;
+    }
+
+    .txt_login_info,
+    .txt_login_info span {
+        font-size: 0.20rem;
+    }
+
+    .txt_login_info {
+        width: 100%;
+        margin: 0.20rem 0 0 0;
+    }
+
+    .txt_login_info.txt_login_info01 {
+        margin: 0.20rem 0 0.70rem 0;
+    }
+
+    .login_info {
+        padding: 0 0.55rem;
+    }
+
+    .login_screen {
+        border-radius: 0.30rem;
+        margin: 0;
+    }
+
+    .info_list {
+        border-radius: 0.30rem 0.30rem 0 0;
+        max-height: 1.46rem;
+        min-height: 1.46rem;
+    }
+
+    .info_list li {
+        font-size: 0.24rem;
+    }
+
+    .info_list li.ttl_login_info {
+        font-size: 0.28rem;
+        margin-bottom: 0;
+    }
+
+    .login_screen .btn_yellow {
+        font-size: 0.24rem;
+        margin-bottom: 0.40rem;
+    }
+
+    .login_screen .btn_yellow span {
+        font-size: 0.32rem;
+    }
+
+    .login_screen .btn_yellow:after {
+        width: 0.29rem;
+        height: 0.25rem;
+        right: 0.28rem;
+    }
+
+    .screen_mobile .screen_img {
+        width: 91%;
+        max-width: 4.90rem;
+        margin: 0 0 0 -0.28rem;
+    }
+
+    .screen_pc .screen_img {
+        width: 107%;
+        max-width: 5.74rem;
+        margin: 0 0 0.22rem -0.17rem;
+    }
+    /*end of Trial Experience Section*/
+
+    /*Usage Fee Section*/
+    .txt_usage {
+        margin-bottom: 1.10rem;
+    }
+
+    .txt_usage span {
+        font-size: 0.30rem;
+    }
+
+    .usage_list {
+        margin-bottom: 0.35rem;
+    }
+
+    .usage_item {
+        border-radius: 0.20rem;
+        padding: 0.44rem;
+    }
+
+    .usage_item .btn_org {
+        font-size: 0.36rem;
+        border-radius: 0.45rem;
+        padding: 0.27rem 0.20rem;
+        width: 4.70rem;
+        margin: 0 auto 0.60rem;
+    }
+
+    .usage_item .btn_org:before {
+        border-width: 0.26rem 0.19rem 0 0.19rem;
+        bottom: -0.24rem;
+    }
+
+    .usage_item .txt_com_sm {
+        font-size: 0.24rem;
+    }
+
+    .app_account .txt_payment {
+        font-size: 0.26rem;
+        margin-bottom: 0.40rem;
+    }
+
+    .payment .txt_payment {
+        margin-bottom: 0.30rem;
+    }
+
+    .usage_example .txt_com {
+        margin-bottom: 0.10rem;
+        font-size: 0.32rem;
+    }
+
+    .usage_example,
+    .payment_list {
+        border-radius: 0.20rem;
+        padding: 0.40rem;
+    }
+
+    .payment_list li {
+        margin-bottom: 0.03rem;
+    }
+
+    .txt_payment_note {
+        margin-bottom: 0.70rem;
+    }
+
+    .campaign_sec {
+        border-radius: 0.30rem;
+        padding: 0 0.45rem;
+    }
+
+    .campaign_sec:before {
+        background: url("/assets/images/lp/bg_campaign_sp.png") no-repeat top center;
+        -webkit-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        background-size: 100% auto;
+        width: 7.50rem;
+        height: 4.50rem;
+        left: 50%;
+        top: -0.33rem;
+    }
+
+    .ttl_campaign {
+        width: 7.08rem;
+        max-width: 7.08rem;
+        margin: 0 auto 0.12rem
+    }
+
+    .ttl_campaign img {
+        margin: -0.16rem 0 0 -1.5rem;
+    }
+
+    .txt_campaign_des,
+    .txt_campaign_des span {
+        font-size: 0.28rem;
+    }
+
+    .txt_campaign_des {
+        margin-bottom: 0.35rem;
+    }
+
+    .campaign_info {
+        border-radius: 0.15rem;
+        padding: 0.35rem;
+        margin-bottom: 0.40rem;
+    }
+
+    .campaign_type,
+    .campaign_date,
+    .campaign_date span {
+        font-size: 0.24rem;
+    }
+
+    .campaign_type {
+        font-size: 0.26rem;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .campaign_date {
+        width: 100%;
+    }
+
+    .campaign_img {
+        width: 1.08rem;
+        max-width: 1.08rem;
+        right: -0.20rem;
+        bottom: 1.7rem;
+    }
+    /*end of Usage Fee Section*/
+
+    /*Question And Answer*/
+    .qa_sec .ttl_h3 {
+        margin-bottom: 0.30rem;
+    }
+
+    .qa_item {
+        margin-bottom: 0.30rem;
+    }
+
+    .ques_sec {
+        border-radius: 0.50rem;
+        padding: 0.12rem 0.60rem 0.12rem 0.30rem;
+    }
+
+    .ques_sec:after {
+        width: 0.18rem;
+        height: 0.11rem;
+        right: 0.30rem;
+    }
+
+    .icon_ques,
+    .icon_ans {
+        width: 8%;
+        font-size: 0.30rem;
+    }
+
+    .txt_ques {
+        width: 92%;
+        font-size: 0.24rem;
+    }
+
+    .ans_sec {
+        padding: 0.15rem 0.30rem;
+    }
+
+    .txt_ans {
+        width: 92%;
+    }
+    /*end of Question And Answer*/
+
+    /*Form Section*/
+    .form_sec .ttl_h3 {
+        margin-bottom: 0.60rem;
+    }
+
+    .app_form {
+        border-radius: 0.30rem;
+        padding: 0.35rem 0 0 0;
+    }
+
+    .txt_form_info {
+        font-size: 0.26rem;
+        margin-bottom: 0.30rem;
+        padding: 0 0.40rem;
+    }
+
+    .app_form .txt_com_sm {
+        padding: 0 0.40rem;
+        margin-bottom: 0.35rem;
+    }
+
+    .form_app {
+        border-radius: 0 0 0.30rem 0.30rem;
+        padding: 0.45rem 0.45rem 0.75rem 0.45rem;
+    }
+
+    .txt_form_note {
+        font-size: 0.28rem;
+        margin-bottom: 0.20rem;
+    }
+
+    .txt_form_note span {
+        font-size: 0.22rem;
+    }
+
+    .form_item {
+        margin-bottom: 0.35rem;
+    }
+
+    .form_item.form_textarea {
+        margin-bottom: 0.35rem;
+    }
+
+    .txt_label {
+        width: 100%;
+        font-size: 0.24rem;
+        margin-bottom: 0.20rem;
+    }
+
+    .txt_label span {
+        font-size: 0.22rem;
+    }
+
+    .form_field{
+        width: 100%;
+        border: 0.01rem solid #bbbbbb;
+        font-size: 0.24rem;
+        height: 0.68rem;
+        padding: 0 0.20rem;
+    }
+
+    textarea.form_field {
+        height: 1.37rem;
+        padding: 0.20rem;
+    }
+
+    .form_app .btn_yellow {
+        font-size: 0.28rem;
+        border-radius: 0.45rem;
+        padding: 0.25rem 1.17rem;
+    }
+    /*end of Form Section*/
+}
+
+/*end of SP*/
