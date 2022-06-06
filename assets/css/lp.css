@@ -126,6 +126,93 @@ section.mv_kinreco_lp {
     max-width: 354px;
 }
 
++/*reason_sec*/
+.reason_sec{
+    padding-top: 0;
+}
+.reason_box {
+    position: relative;
+    padding: 160px 0 0;
+    max-width: 780px;
+    margin: 0 auto;
+}
+.reason_box .img_human_think{
+    width: 19.77%;
+    max-width: 172px;
+    margin: 0 auto;
+}
+
+.resong_msg{
+    position: absolute;
+
+}
+
+.resong_msg.msg01{
+    background: url('/assets/images/lp/bg_resong_msg01.png') no-repeat center;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 30.34%;
+    max-width: 264px;
+    top: 0;
+    left: 50%;
+   -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.resong_msg.msg02{
+    background: url('/assets/images/lp/bg_resong_msg02.png') no-repeat center;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 28.73%;
+    max-width: 250px;
+    top: 30px;
+    left: 0;
+}
+
+.resong_msg.msg03{
+    background: url('/assets/images/lp/bg_resong_msg03.png') no-repeat center;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 30.34%;
+    max-width: 264px;
+    top: 30px;
+    right: 0;
+}
+
+.resong_msg.msg04{
+    background: url('/assets/images/lp/bg_resong_msg04.png') no-repeat center;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 34.34%;
+    max-width: 264px;
+    bottom: 30px;
+    left: 0;
+}
+
+.resong_msg.msg05{
+    background: url('/assets/images/lp/bg_resong_msg05.png') no-repeat center;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 30.34%;
+    max-width: 264px;
+    bottom: 30px;
+    right: 0;
+}
+
+.resong_msg p{
+    font-size: 13px;
+    line-height: 1.8;
+    padding: 46px 10px 60px;
+}
+
 /*For tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
 	/*mv_kinreco_lp*/
@@ -199,6 +286,27 @@ section.mv_kinreco_lp {
 
     .explain_detail .explain_image{
         right: 3.833vw;
+    }
+     /*reason_sec*/
+    .reason_box {
+        position: relative;
+        padding: 13.333vw 0 0;
+    }
+
+    .resong_msg.msg02,
+    .resong_msg.msg03{
+        top: 2.500vw;
+    }
+
+    .resong_msg.msg04,
+    .resong_msg.msg05{
+        bottom: 2.500vw;
+    }
+
+    .resong_msg p{
+        font-size: 1.083vw;
+        line-height: 1.8;
+        padding: 3.333vw 1.667vw 5vw;
     }
 }
 /*For SP*/
