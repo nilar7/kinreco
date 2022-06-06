@@ -140,7 +140,7 @@ section.mv_kinreco_lp {
     border-style: solid;
     border-width: 28px 67px 0 67px;
     border-color: #f7f7f7 transparent transparent transparent;
-    bottom: -60px;
+    bottom: -28px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
