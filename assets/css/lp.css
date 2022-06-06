@@ -313,7 +313,7 @@ section.mv_kinreco_lp {
 @media only screen and (max-width: 767px) {
     /*mv_kinreco_lp*/
     section.mv_kinreco_lp {
-        padding: .65rem 0 0;
+        padding: 1.5rem 0 0;
     }
 
     .mv_kinreco_lp .inner{
@@ -441,8 +441,101 @@ section.mv_kinreco_lp {
         text-align: right;
     }
 }
-/*Service Section*/
 
+/*Service Section*/
+.service_sec {
+    background: #ff8154;
+    position: relative;
+}
+
+.service_sec:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 28px 67px 0 67px;
+    border-color: #fff transparent transparent transparent;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.service_sec .ttl_h3,
+.service_sec .ttl_h3 .line_txt {
+    color: #fff;
+}
+
+.service_item {
+    -webkit-align-items: center;
+            align-items: center;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 45px;
+    max-height: 360px;
+    min-height: 360px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.service_item:last-child {
+    margin-bottom: 0;
+}
+
+.service_item:nth-child(2n+1) {
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+}
+
+.service_img {
+    width: 55%;
+    text-align: left;
+}
+
+.service_des {
+    width: 45%;
+}
+
+.service_item:nth-child(2n+1) .service_img {
+    text-align: right;
+}
+
+.service_img img {
+    width: 340px;
+}
+
+.service_item02 .service_img img,
+.service_item03 .service_img img {
+    width: 400px;
+}
+
+.ttl_service {
+    font-size: 22px;
+    color: #ff8154;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.service_des .txt_com_sm {
+    font-size: 13px;
+    text-align: left;
+}
+
+.txt_service {
+    margin-bottom: 40px;
+}
+
+.icon_service {
+    position: absolute;
+    width: 179px;
+    top: -13px;
+    right: -50px;
+}
 /*end of Service Section*/
 /*Trial Experience Section*/
 .sample_screen_sec {
@@ -874,6 +967,47 @@ textarea.form_field {
 
 /*For tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    /*Service Section*/
+    .service_sec:before {
+        border-width: 2.333vw 5.583vw 0 5.583vw;
+    }
+
+    .service_item {
+        border-radius: 2.500vw;
+        padding: 3.750vw;
+        max-height: 30vw;
+        min-height: 30vw;
+        margin-bottom: 2.083vw;
+    }
+
+    .service_img img {
+        width: 28.333vw;
+    }
+
+    .service_item02 .service_img img,
+    .service_item03 .service_img img {
+        width: 33.333vw;
+    }
+
+    .ttl_service {
+        font-size: 1.833vw;
+        margin-bottom: 1.667vw;
+    }
+
+    .service_des .txt_com_sm {
+        font-size: 1.083vw;
+    }
+
+    .txt_service {
+        margin-bottom: 3.333vw;
+    }
+
+    .icon_service {
+        width: 14.917vw;
+        top: -1.083vw;
+        right: -4.167vw;
+    }
+    /*end of Service Section*/
     /*Trial Experience Section*/
     .sample_screen_sec .ttl_h3 {
         margin-bottom: 0.417vw;
@@ -1136,6 +1270,65 @@ textarea.form_field {
 
 /*For SP*/
 @media only screen and (max-width: 767px) {
+    /*Service Section*/
+    .service_sec:before {
+        border-width: 0.35rem 0.90rem 0 0.90rem;
+    }
+
+    .service_sec .ttl_h3 {
+        margin-bottom: 0.70rem;
+    }
+
+    .service_item {
+        border-radius: 0.30rem;
+        padding: 0.70rem 0.48rem;
+        max-height: 100%;
+        min-height: auto;
+        margin-bottom: 0.35rem;
+    }
+
+    .service_img {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.25rem;
+    }
+
+    .service_des {
+        width: 100%;
+    }
+
+    .service_item:nth-child(2n+1) .service_img {
+        text-align: center;
+    }
+
+    .service_img img {
+        width: 5.58rem;
+    }
+
+    .service_item02 .service_img img,
+    .service_item03 .service_img img {
+        width: 5.58rem;
+    }
+
+    .ttl_service {
+        font-size: 0.32rem;
+        margin-bottom: 0.20rem;
+    }
+
+    .service_des .txt_com_sm {
+        font-size: 0.24rem;
+    }
+
+    .txt_service {
+        margin-bottom: 0.35rem;
+    }
+
+    .icon_service {
+        width: 2.45rem;
+        top: -0.65rem;
+        right: -0.28rem;
+    }
+    /*end of Service Section*/
     /*Trial Experience Section*/
     .sample_screen_sec .ttl_h3 {
         margin-bottom: 0.15rem;
@@ -1297,11 +1490,11 @@ textarea.form_field {
     .ttl_campaign {
         width: 7.08rem;
         max-width: 7.08rem;
-        margin: 0 auto 0.12rem
+        margin: 0 auto 0.12rem -0.75rem;
     }
 
     .ttl_campaign img {
-        margin: -0.16rem 0 0 -1.5rem;
+        margin: -0.16rem 0 0 0;
     }
 
     .txt_campaign_des,
