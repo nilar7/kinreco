@@ -333,7 +333,9 @@ section.mv_kinreco_lp {
         text-align: right;
     }
 }
+/*Service Section*/
 
+/*end of Service Section*/
 /*Trial Experience Section*/
 .sample_screen_sec {
     background: #fff;
@@ -648,7 +650,9 @@ section.mv_kinreco_lp {
 }
 
 .icon_ans {
+    display: inline-block;
     color: #ff8154;
+    vertical-align: top;
 }
 
 .txt_ques {
@@ -665,7 +669,8 @@ section.mv_kinreco_lp {
 }
 
 .txt_ans {
-    width: 94%;
+    display: inline-block;
+    width: 93%;
     text-align: left;
 }
 /*end of Question And Answer*/
@@ -749,6 +754,7 @@ section.mv_kinreco_lp {
 textarea.form_field {
     height: 103px;
     padding: 10px;
+    resize: none;
 }
 
 .form_app .btn_yellow {
@@ -1265,7 +1271,7 @@ textarea.form_field {
     }
 
     .txt_ans {
-        width: 92%;
+        width: 91%;
     }
     /*end of Question And Answer*/
 
