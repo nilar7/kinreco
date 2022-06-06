@@ -101,8 +101,13 @@ section.mv_kinreco_lp {
     background: #fff;
 }
 
-.sample_screen_sec .ttl_common_line {
+.sample_screen_sec .ttl_h3 {
     margin-bottom: 5px;
+}
+
+.sample_screen_sec .txt_com_sm span {
+	font-size: 12px;
+	line-height: 1.5;
 }
 
 .txt_login_info,
@@ -113,7 +118,6 @@ section.mv_kinreco_lp {
 
 .txt_login_info {
     margin-bottom: 15px;
-    color: #3a3a3a;
 }
 
 .txt_login_info span {
@@ -175,11 +179,17 @@ section.mv_kinreco_lp {
     max-width: 450px;
     margin-left: -15px;
 }
-
 /*end of Trial Experience Section*/
+
 /*Usage Fee Section*/
 .usage_sec {
     background: #fff5f1;
+}
+
+.txt_usage span {
+	font-size: 22px;
+    color: #ff8154;
+    line-height: 1.3;
 }
 
 .usage_list {
@@ -192,7 +202,7 @@ section.mv_kinreco_lp {
     padding: 20px 25px;
 }
 
-.usage_item .orange_btn {
+.usage_item .btn_org {
     font-size: 18px;
     color: #ffffff;
     border-radius: 25px;
@@ -200,12 +210,12 @@ section.mv_kinreco_lp {
     margin-bottom: 20px;
 }
 
-.usage_item .orange_btn:before {
+.usage_item .btn_org:before {
     border-width: 10px 10px 0 10px;
     bottom: -9px;
 }
 
-.usage_item .txt_common_small {
+.usage_item .txt_com_sm {
     text-align: left;
 }
 
@@ -221,7 +231,7 @@ section.mv_kinreco_lp {
     margin-bottom: 10px;
 }
 
-.usage_example .txt_common {
+.usage_example .txt_com {
     color: #ff8154;
     margin-bottom: 10px;
 }
@@ -327,18 +337,18 @@ section.mv_kinreco_lp {
     right: 40px;
     bottom: -7px;
 }
-
 /*end of Usage Fee Section*/
+
 /*Question And Answer*/
 .qa_sec {
     background: #fff;
 }
 
-.ttl_common_line .ttl_ques {
+.ttl_h3 span.ttl_ques {
     color: #73afc7;
 }
 
-.ttl_common_line .ttl_ans {
+.ttl_h3 span.ttl_ans {
     color: #ff8154;
 }
 
@@ -420,5 +430,49 @@ section.mv_kinreco_lp {
     width: 94%;
     text-align: left;
 }
-
 /*end of Question And Answer*/
+
+/*Form Section*/
+.form_sec {
+	background: #ff8154;
+}
+
+.form_sec .ttl_h3,
+.form_sec .ttl_h3 .line_txt {
+	color: #fff;
+}
+
+.app_form {
+	width: 100%;
+	background: #fff;
+	border-radius: 30px;
+	padding: 45px 0 0 0;
+}
+
+.app_form .txt_com {
+	font-size: 18px;
+	margin-bottom: 18px;
+}
+
+.app_form .txt_com_sm {
+	color: #6f6f6f;
+	margin-bottom: 55px;
+}
+
+.form_app {
+	background: #fff5f1;
+	border-radius: 0 0 30px 30px;
+	padding: 35px 65px;
+}
+
+.txt_form_note {
+	font-size: 22px;
+	color: #3a3a3a;
+	line-height: 1.5;
+}
+
+.txt_form_note span {
+	font-size: 14px;
+	color: #be2323;
+}
+/*end of Form Section*/
