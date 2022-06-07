@@ -143,12 +143,24 @@ $(function() {
 // page_top
 $(document).ready(function() {
         var topBtn = $('.page_top');
+        var f= $("footer").offset().top ;
+        if($(window).width()< 768){
+            f= $("footer").offset().top+ 50;
+        }
+        console.log(f);
         topBtn.hide();
         $(window).scroll(function() {
+            topBtn.css("bottom","0px");
+            var scrolls =$(this).scrollTop() + $(window).height();
+            console.log(scrolls);
             if ($(this).scrollTop() > 100) {
                 topBtn.fadeIn();
+
             } else {
                 topBtn.fadeOut();
+            }
+            if(scrolls>= f){
+                 topBtn.removeAttr( 'style' );
             }
         });
       $('.page_top').click(function() {
