@@ -13,7 +13,7 @@ footer{
 }
 .page_top {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     bottom: 86px;
     right: 20px;
     width: 130px;
