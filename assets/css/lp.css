@@ -1152,7 +1152,7 @@ textarea.form_field {
 @media only screen and (max-width: 767px) {
     /*mv_kinreco_lp*/
     section.mv_kinreco_lp {
-        padding: 1.5rem 0 0;
+        padding: 1.6rem 0 0;
     }
 
     .mv_kinreco_lp .inner{
@@ -1186,8 +1186,8 @@ textarea.form_field {
         width: 100%;
         max-width: 7.5rem;
         position: relative;
-        top: auto;
-        right: auto;
+        top: 0.40rem;
+        right: 0;
     }
 
     .mv_kinrekun_image img{
@@ -1211,6 +1211,10 @@ textarea.form_field {
     .mv_content .txt_com{
         font-size: .29rem;
         margin-bottom: .4rem;
+    }
+
+    .mv_content .btn_yellow.btn_contact {
+        margin-bottom: 0.25rem;
     }
 
     /*attend_sys_sec*/
@@ -1711,6 +1715,7 @@ textarea.form_field {
         font-size: 0.26rem;
         margin-bottom: 0.30rem;
         padding: 0 0.40rem;
+        text-align: left;
     }
 
     .app_form .txt_com_sm {
