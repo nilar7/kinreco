@@ -16,20 +16,23 @@ footer{
     position: fixed;
     bottom: 86px;
     right: 20px;
-    width: 130px;
+    width: 65px;
     text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     background-color: #ffea59;
     font-size: 12px;
-    padding: 15px 0;
+    border-radius: 119px;
+    height: 65px;
+    padding: 35px 0 12px;
+
 }
 .arrow {
-  border: solid #42423b;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  margin-left: 5px;
+    border: solid #42423b;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    top: 22px;
+    left: 28px;
 }
 .up {
   transform: rotate(-135deg);
@@ -53,17 +56,18 @@ footer{
     .page_top {
         bottom: 7.167vw;
         right: 1.667vw;
-        width: 10.833vw;
-        border-top-left-radius: 0.833vw;
-        border-top-right-radius: 0.833vw;
+        width: 5.417vw;
         font-size: 1vw;
-        padding: 1.250vw 0;
+        border-radius: 10vw;
+        height: 5.417vw;
+        padding: 2.917vw 0 1vw;
+
     }
     .arrow {
         border-width: 0 0.167vw 0.167vw 0;
-        display: inline-block;
         padding: 0.250vw;
-        margin-left: 0.417vw;
+        top: 1.833vw;
+        left: 2.333vw;
     }
 
    
@@ -102,21 +106,23 @@ footer{
         font-size: .24rem;
         padding: 0.12rem 0;
     }
+    
+
     .page_top {
-        bottom: 4.25rem;
+        bottom: 4.2rem;
         right: 0.1rem;
-        width: 2.28rem;
-        text-align: center;
-        border-top-left-radius: 0.1rem;
-        border-top-right-radius: 0.1rem;
+        width: 1rem;
+        height: 1rem;
         font-size: .2rem;
-        padding: 0.25rem 0;
+        border-radius: 1.19rem;
+        padding: 0.55rem 0 0.12rem;
+
     }
     .arrow {
-        border-width: 0 0.02rem 0.02rem 0;
-        padding: 0.06rem;
-        margin-left: 0.1rem;
-        position: relative;
-        bottom: -0.04rem;
+        
+       border-width: 0 0.02rem 0.02rem 0;
+    padding: 0.06rem;
+    top: 0.35rem;
+    left: 0.42rem;
     }
 }
