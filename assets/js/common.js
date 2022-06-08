@@ -142,31 +142,30 @@ $(function() {
 
 // page_top
 $(document).ready(function() {
-        var topBtn = $('.page_top');
-        var f= $("footer").offset().top ;
-        if($(window).width()< 768){
-            f= $("footer").offset().top+ 50;
-        }
-        console.log(f);
-        topBtn.hide();
-        $(window).scroll(function() {
-            topBtn.css("bottom","0px");
-            var scrolls =$(this).scrollTop() + $(window).height();
-            console.log(scrolls);
-            if ($(this).scrollTop() > 100) {
-                topBtn.fadeIn();
-
-            } else {
-                topBtn.fadeOut();
-            }
-            if(scrolls>= f){
-                 topBtn.removeAttr( 'style' );
-            }
-        });
       $('.page_top').click(function() {
             $("body, html").animate({ scrollTop: 0 }, 500);
             return false;
         });
+
+
+      var hh = $('header').height();
+    $(window).scroll(function(){
+      var st = $(window).scrollTop(), wh = document.documentElement.clientHeight;
+
+      if (st > hh) {
+        $('.page_top').addClass('show');
+      }
+      else {
+        $('.page_top').removeClass('show');
+      }
+
+      if (st > $('.footer_sec').offset().top - wh) {
+        $('.page_top').addClass('stop');
+      }
+      else {
+        $('.page_top').removeClass('stop');
+      }
+    });
 
 
     // end of page_top
