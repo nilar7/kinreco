@@ -746,6 +746,15 @@ textarea.form_field {
     border-radius: 30px;
     padding: 16px 77px;
 }
+
+.error{
+    font-size: 12px;
+    padding: 15px 0 0;
+    width: 100%;
+    text-align: left;
+    left: 140px;
+    position: relative;
+}
 /*end of Form Section*/
 
 /*For tablet*/
@@ -1145,6 +1154,14 @@ textarea.form_field {
         padding: 1.333vw 6.417vw;
     }
     /*end of Form Section*/
+    
+    .error{
+        font-size: 1vw;
+        padding: 1.250vw 0 0;
+        width: 100%;
+        left: 11.667vw;
+
+    }
 }
 /*end of Tablet*/
 
@@ -1772,6 +1789,12 @@ textarea.form_field {
         font-size: 0.28rem;
         border-radius: 0.45rem;
         padding: 0.25rem 1.17rem;
+    }
+    .error{
+        font-size: 0.20rem;
+        padding: 0.15rem 0 0;
+        left: 0;
+
     }
     /*end of Form Section*/
 }

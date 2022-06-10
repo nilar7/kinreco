@@ -1,3 +1,156 @@
+<?php
+
+    require(__DIR__ . '/../lib/vendor/autoload.php');
+
+    // Call PHPMailer
+    use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
+
+    $errors = [];
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $company_name = isset($_POST['company_name']) ? strip_tags(html_entity_decode($_POST['company_name'])) : '';
+        $department = isset($_POST['department']) ? strip_tags(html_entity_decode($_POST['department'])) : '';
+        $name = isset($_POST['name']) ? strip_tags(html_entity_decode($_POST['name'])) : '';
+        $phone_number = isset($_POST['phone_number']) ? strip_tags(html_entity_decode($_POST['phone_number'])) : '';
+        $mail = isset($_POST['mail']) ? strip_tags(html_entity_decode($_POST['mail'])) : '';
+        $user_number = isset($_POST['user_number']) ? strip_tags(html_entity_decode($_POST['user_number'])) : '';
+        $introduction_time = isset($_POST['introduction_time']) ? strip_tags(html_entity_decode($_POST['introduction_time'])) : '';
+        $description = isset($_POST['description']) ? strip_tags(html_entity_decode($_POST['description'])) : '';
+
+        if(trim($company_name) == ''){
+            $errors['company_name'] = 'ご社名を記入してください';
+        } else {
+            if(strlen($company_name) > 1200){
+                $errors['company_name'] = 'ご社名が無効な名前です。';
+            }
+        }
+        if(trim($department) == ''){
+            $errors['department'] = '部署名を記入してください';
+        } else {
+            if(strlen($department) > 1200){
+                $errors['department'] = '部署名が無効な名前です。';
+            }
+        }
+        if(trim($name) == ''){
+            $errors['name'] = 'ご氏名を記入してください';
+        } else {
+            if(strlen($name) > 1200){
+                $errors['name'] = 'ご氏名が無効な名前です。';
+            }
+        }
+        if(trim($phone_number) == ''){
+            $errors['phone_number'] = '電話番号を記入してください';
+        } else {
+            if(strlen($phone_number) > 1200){
+                $errors['phone_number'] = '電話番号が無効な名前です。';
+            }
+        }
+        if(trim($mail) == ''){
+            $errors['mail'] = 'Mailアドレスを記入してください';
+        } else {
+            if(strlen($mail) > 1200){
+                $errors['mail'] = 'Mailアドレスが無効な名前です。';
+            }
+        }
+        if(strlen($user_number) > 1200){
+            $errors['user_number'] = '導入予定人数が無効な名前です。';
+        }
+        if(strlen($introduction_time) > 1200){
+            $errors['introduction_time'] = '導入希望時期が無効な名前です。';
+        }
+        if(strlen($description) > 7800){
+            $errors['description'] = 'ご質問ご相談内容が無効な名前です。';
+        }
+
+        // If No Errors in Validation
+        if(count($errors) === 0){
+
+            $sender_email = 'htayminkhaung@gmail.com';
+            $full_name = $name;
+            $subject = 'お申込みやご相談';
+
+            $phpMailer = new PHPMailer(true);
+            $phpMailer->CharSet = "UTF-8";
+            
+            // Mail Body
+            $body = '';
+            $body = $body."***＜ここから＞*********************************************<br><br>";
+            $body = $body."ご社名<br>";
+            $body = $body."".$company_name."<br><br>";
+            $body = $body."部署名<br>";
+            $body = $body."".$department."<br><br>";
+            $body = $body."ご氏名<br>";
+            $body = $body."".$name."<br><br>";
+            $body = $body."電話番号<br>";
+            $body = $body."".$phone_number."<br><br>";
+            $body = $body."Mailアドレス<br>";
+            $body = $body."".$mail."<br><br>";
+            $body = $body."導入予定人数<br>";
+            $body = $body."".$user_number."<br><br>";
+            $body = $body."導入希望時期<br>";
+            $body = $body."".$introduction_time."<br><br>";
+            $body = $body."ご質問・ご相談内容<br>";
+            $body = $body."".nl2br($description)."<br>";
+
+            // Mail Body (Reply to Admin)
+            $rbody = "▼メッセージを管理者メールに転送する<br><br>" . $body;
+
+            // Mail Setting for Contact
+            $phpMailer->From			= $sender_email;
+            $phpMailer->FromName		= 'ポチっと勤レコくん';
+            $phpMailer->addAddress($mail, $full_name);           // Add a recipient
+            $phpMailer->isHTML(true);
+            $phpMailer->Subject = $subject;
+            $phpMailer->Body    = $body;
+            $phpMailer->AltBody = strip_tags($body);
+
+            // GMail Setting
+            // $phpMailer->SMTPDebug = 2;                          // Enable verbose debug output
+            $phpMailer->isSMTP();                               // Set mailer to use SMTP
+            $phpMailer->Host       = 'smtp.gmail.com';          // Specify main SMTP server
+            $phpMailer->SMTPAuth   = true;                      // Enable SMTP authentication
+            $phpMailer->Username   = 'htayminkhaung@gmail.com'; // SMTP username
+            $phpMailer->Password   = 'fapdfknbtrhqphew';         // SMTP password
+            $phpMailer->SMTPSecure = 'tls';                     // Enable TLS encryption, 'ssl' also accepted
+            $phpMailer->Port       = 587;                       // TCP port to connect to
+
+            $phpMailer->send();
+
+            $subject_to_admin = 'お申込みやご相談(管理者に報告する)';
+
+            // Mail Setting for Admin Reply
+            $phpMailerR = new PHPMailer(true);
+            $phpMailerR->CharSet = "UTF-8";
+            $phpMailerR->From			= $mail;
+            $phpMailerR->FromName		= $name;
+            $phpMailerR->addAddress($sender_email, $name);           // Add a recipient
+            $phpMailerR->isHTML(true);
+            $phpMailerR->Subject = $subject_to_admin;
+            $phpMailerR->Body    = $rbody;
+            $phpMailerR->AltBody = strip_tags($rbody);
+
+            // GMail Setting ( For Admin Reply )
+            // $phpMailerR->SMTPDebug = 2;                          // Enable verbose debug output
+            $phpMailerR->isSMTP();                               // Set mailer to use SMTP
+            $phpMailerR->Host       = 'smtp.gmail.com';          // Specify main SMTP server
+            $phpMailerR->SMTPAuth   = true;                      // Enable SMTP authentication
+            $phpMailerR->Username   = 'htayminkhaung@gmail.com'; // SMTP username
+            $phpMailerR->Password   = 'fapdfknbtrhqphew';         // SMTP password
+            $phpMailerR->SMTPSecure = 'tls';                     // Enable TLS encryption, 'ssl' also accepted
+            $phpMailerR->Port       = 587;                       // TCP port to connect to
+
+            $phpMailerR->send();
+
+            echo "<script>window.location.href = '/lp/';</script>";
+            die();
+
+        }
+
+    }
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -345,41 +498,56 @@
                 <div class="app_form">
                     <p class="txt_com txt_form_info">サービスご利用のお申込みやご不明点の質問、カスタマイズのご相談など、<br class="only_pc">下記のフォームよりご連絡をお願いいたします。<br>後日、Spiceworksの担当者よりご連絡をさせていただきます。</p>
                     <p class="txt_com_sm">※平日10-17時のご対応となります。Spiceworksよりのご連絡には数日のお時間をいただく場合がございます。<br>営業的なご連絡など、内容によってご連絡できない場合もございますので、予めご了承ください。</p>
-                    <form action="" class="form_app">
+                    <form action="" method="POST" class="form_app">
                         <p class="txt_form_note bold main_col">下記をご入力のうえ「送信」を<br class="only_sp">押してください。<span class="regular">※印は必須入力</span></p>
                         <div class="form_item flex">
                             <p class="txt_label txt_com bold">ご社名<span>※</span></p>
-                            <input type="text" class="form_field">
+                            <input type="text" class="form_field" name="company_name" value="<?php echo isset($company_name) ? htmlentities($company_name, ENT_QUOTES, 'utf-8') : ''; ?>">
+                        <?php if(isset($errors['company_name'])): ?>
+                            <span class="error" style="display: block; color: red;"><?php echo $errors['company_name']; ?></span>
+                        <?php endif; ?>
                         </div>
                         <div class="form_item flex">
                             <p class="txt_label txt_com bold">部署名<span>※</span></p>
-                            <input type="text" class="form_field">
+                            <input type="text" class="form_field" name="department" value="<?php echo isset($department) ? htmlentities($department, ENT_QUOTES, 'utf-8') : ''; ?>">
+                        <?php if(isset($errors['department'])): ?>
+                            <span class="error" style="display: block; color: red;"><?php echo $errors['department']; ?></span>
+                        <?php endif; ?>
                         </div>
                         <div class="form_item flex">
                             <p class="txt_label txt_com bold">ご氏名<span>※</span></p>
-                            <input type="text" class="form_field">
+                            <input type="text" class="form_field" name="name" value="<?php echo isset($name) ? htmlentities($name, ENT_QUOTES, 'utf-8') : ''; ?>">
+                        <?php if(isset($errors['name'])): ?>
+                            <span class="error" style="display: block; color: red;"><?php echo $errors['name']; ?></span>
+                        <?php endif; ?>
                         </div>
                         <div class="form_item flex">
                             <p class="txt_label txt_com bold">電話番号<span>※</span></p>
-                            <input type="text" class="form_field">
+                            <input type="text" class="form_field" name="phone_number" value="<?php echo isset($phone_number) ? htmlentities($phone_number, ENT_QUOTES, 'utf-8') : ''; ?>">
+                        <?php if(isset($errors['phone_number'])): ?>
+                            <span class="error" style="display: block; color: red;"><?php echo $errors['phone_number']; ?></span>
+                        <?php endif; ?>
                         </div>
                         <div class="form_item flex">
                             <p class="txt_label txt_com bold">Mailアドレス<span>※</span></p>
-                            <input type="text" class="form_field">
+                            <input type="email" class="form_field" name="mail" value="<?php echo isset($mail) ? htmlentities($mail, ENT_QUOTES, 'utf-8') : ''; ?>">
+                        <?php if(isset($errors['mail'])): ?>
+                            <span class="error" style="display: block; color: red;"><?php echo $errors['mail']; ?></span>
+                        <?php endif; ?>
                         </div>
                         <div class="form_item flex">
                             <p class="txt_label txt_com bold">導入予定人数</p>
-                            <input type="text" class="form_field">
+                            <input type="text" class="form_field" name="user_number" value="<?php echo isset($user_number) ? htmlentities($user_number, ENT_QUOTES, 'utf-8') : ''; ?>">
                         </div>
                         <div class="form_item flex">
                             <p class="txt_label txt_com bold">導入希望時期</p>
-                            <input type="text" class="form_field">
+                            <input type="text" class="form_field" name="introduction_time" value="<?php echo isset($introduction_time) ? htmlentities($introduction_time, ENT_QUOTES, 'utf-8') : ''; ?>">
                         </div>
                         <div class="form_item flex form_textarea">
                             <p class="txt_label txt_com bold">ご質問・<br class="only_pc">ご相談内容</p>
-                            <textarea type="text" class="form_field"></textarea>
+                            <textarea type="text" class="form_field" name="description"><?php echo isset($description) ? htmlentities($description, ENT_QUOTES, 'utf-8') : ''; ?></textarea>
                         </div>
-                        <a href="" class="btn_yellow">送信</a>
+                        <button type="submit" class="btn_yellow">送信</button>
                     </form>
                 </div>
             </div>
@@ -404,6 +572,14 @@
                 $(this).find(".ans_sec").css('display','block');
             }
         });
+
+        <?php if(count($errors) > 0): ?>
+
+            var errScrollTop = $('.form_app .error').eq(0).position().top - 120;
+            $("html, body").animate({ scrollTop: errScrollTop }, "slow");
+
+        <?php endif; ?>
+
     });
 </script>
 
